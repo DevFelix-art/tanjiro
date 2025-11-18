@@ -7,7 +7,7 @@ const { generateWAMessageFromContent, prepareWAMessageMedia, proto } = pkg
 
 var handler = m => m
 handler.all = async function (m) { 
-global.canalIdM = ["120363421036863665@newsletter", "120363421036863665@newsletter"]
+global.canalIdM = ["120363406529946290@newsletter", "120363406529946290@newsletter"]
 global.canalNombreM = ["ᐛ ᕕ  𝐘𝐨𝐭𝐬𝐮𝐛𝐚 - 𝐔𝐩𝐝𝐚𝐭𝐞𝐬 ᕗ ᐛ", "ᐛ ᕕ  𝐘𝐨𝐭𝐬𝐮𝐛𝐚 - 𝐔𝐩𝐝𝐚𝐭𝐞𝐬 ᕗ ᐛ"]
 global.channelRD = await getRandomChannel()
 
@@ -27,7 +27,7 @@ var correo = 'https://whatsapp.com/channel/0029VbBkjlfLSmbWl3SH6737'
 global.redes = [canal, comunidad, git, github, correo].getRandom()
 
 global.nombre = m.pushName || 'Anónimo'
-global.packsticker = `⊹ 🐬 Deymoon🧠 Club\n↳ Deymoon.club\n\n👹 Info:\n dedeymoon-club.vercel.app/`
+global.packsticker = `⊹ 🐬 Deymoon🧠 Club\n↳ Deymoon.club\n\n👹 Info:\n deymoon-club.vercel.app/`
 global.packsticker2 = `⊹ 👑Bot:\n⊹ ↳ @${botname}\n\n👑 Usuario:\n⊹ ↳ @${nombre}`
 
 global.fkontak = { key: { participants:"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
