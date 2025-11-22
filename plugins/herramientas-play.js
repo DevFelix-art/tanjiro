@@ -3,17 +3,17 @@ import yts from 'yt-search'
 
 const handler = async (m, { conn, text, usedPrefix, command }) => {
   try {
-    if (!text.trim()) return conn.reply(m.chat, `*ᐛ👑* Dime el nombre de la música encantada que quieres que busque.`, m, rcanal)
+    if (!text.trim()) return conn.reply(m.chat, `*ᐛ❄* Dime el nombre de la música encantada que quieres que le pida a papá noel.`, m, rcanal)
     await m.react('🕒')
     const videoMatch = text.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|shorts\/|live\/|v\/))([a-zA-Z0-9_-]{11})/)
     const query = videoMatch ? 'https://youtu.be/' + videoMatch[1] : text
     const search = await yts(query)
     const result = videoMatch ? search.videos.find(v => v.videoId === videoMatch[1]) || search.all[0] : search.all[0]
-    if (!result) throw '😐 No se encontraron resultados.'
+    if (!result) throw '🎁 No se encontraron resultados.'
     const { title, thumbnail, timestamp, views, ago, url, author, seconds } = result
-    if (seconds > 1800) throw '*😿 Solo puedo procesar cosas de 10 minutos o menos.*'
+    if (seconds > 1800) throw '*☃️ Solo puedo procesar cosas de 10 minutos o menos.*'
     const vistas = formatViews(views)
-    const info = `💜 Estoy Procesando *${title}* del canal *${author.name}*.\n\n- Si quieres verlo más tarde búscalo en *${url}*`
+    const info = `🔔 Estoy Procesando *${title}* del canal *${author.name}*.\n\n- Si quieres verlo más tarde búscalo en *${url}*`
 
     // Enviar la miniatura como si viniera de un link (no se descarga a buffer)
     await conn.sendMessage(m.chat, { image: { url: thumbnail }, caption: info }, { quoted: m })
