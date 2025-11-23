@@ -4,7 +4,7 @@ import { WAMessageStubType } from '@whiskeysockets/baileys'
 
 // Función para obtener nombre y banner del bot según la sesión/config
 function getBotConfig(conn) {
-  let nombreBot = typeof botname !== 'undefined' ? botname : 'Yotsuba Nakano IA'
+  let nombreBot = typeof botname !== 'undefined' ? botname : 'Tanjiro-Ultra-Bot'
   let bannerFinal = 'https://qu.ax/lTOFy.jpg'
 
   const botActual = conn.user?.jid?.split('@')[0]?.replace(/\D/g, '')
