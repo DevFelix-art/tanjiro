@@ -32,9 +32,9 @@ async function sendByeTo(conn, chatId, userId) {
     const devby = `${nombreBot}, ${typeof textbot !== 'undefined' ? textbot : ''}`
 
     const despedida =
-      `👋 BYE 👋\n\n` +
-      `🌟 ${taguser}\n\n` +
-      `💫 Esperamos verte de vuelta en este mundo mágico.\n\n` +
+      `🌸 ADIOS DEL GRUPO 🌸\n\n` +
+      `*->* ${taguser}\n\n` +
+      `\n\n` +
       `> Si necesitas ayuda, usa *#help*.`
 
     await conn.sendMessage(chatId, {
