@@ -2,30 +2,6 @@ import fs from 'fs'
 import path from 'path'
 import fetch from 'node-fetch'
 
-/**
- * Economy plugin (sin setname / setcurrency / setbanner / test)
- * Ajustado: el comando de depósito (d / deposit / depositar) solo responde si el mensaje usa el prefijo (usedPrefix).
- *
- * Comandos soportados:
- *  - daily, cofre           (cooldown 24h)
- *  - minar                 (cooldown 24 minutos)
- *  - crime / crimen
- *  - rob  (roba EXP)       (cooldown 1h)
- *  - rob2 (roba moneda)    (cooldown 1h)
- *  - d / deposit / depositar  (depositar all o cantidad)  <-- ahora requiere prefijo para 'd'
- *  - bal                   (ver saldo de usuario, reply/mention o propio)
- *  - baltop <page?>        (top por grupo, 10 por página, solo en grupos)
- *  - lvl                   (subir de nivel si tiene >= 1000 exp)
- *
- * Todas las respuestas se envían "como si vinieran del canal" usando:
- *  - contextInfo.isForwarded = true
- *  - contextInfo.forwardedNewsletterMessageInfo
- *  - contextInfo.externalAdReply (thumbnail pequeña => renderLargerThumbnail: false)
- *
- * Usa global.db.data.users con campos:
- *  exp, money, bank, level, lastDaily, lastCofre, lastMinar, lastRob, lastRob2
- */
-
 // helpers
 const toMs = (h = 0, m = 0, s = 0) => ((h * 3600) + (m * 60) + s) * 1000
 const randInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min
@@ -162,13 +138,13 @@ let handler = async (m, { conn, text = '', usedPrefix = '#', command = '' }) => 
         const now = Date.now()
         if (now - (u[key] || 0) < cd) {
           const rem = (u[key] || 0) + cd - now
-          return sendAsChannel(m.chat, { text: `👑 Vuelve en ${formatDelta(rem)}` }, { quoted: m })
+          return sendAsChannel(m.chat, { text: `🔥 Vuelve en ${formatDelta(rem)}` }, { quoted: m })
         }
         const amount = randInt(1, 999)
         u.money = (u.money || 0) + amount
         u[key] = now
         return sendAsChannel(m.chat, {
-          text: `👑 Reclamante tu *${cmd === 'daily' ? 'recompensa diaria' : 'cofre de hoy'}.* Recursos:\n\n💜 *${currency}:* ${amount}`
+          text: `🔥 Reclamante tu *${cmd === 'daily' ? 'recompensa diaria' : 'cofre de hoy'}.* Recursos:\n\n💪 *${currency}:* ${amount}`
         }, { quoted: m })
       }
 
@@ -180,7 +156,7 @@ let handler = async (m, { conn, text = '', usedPrefix = '#', command = '' }) => 
         const now = Date.now()
         if (now - (u.lastMinar || 0) < cd) {
           const rem = (u.lastMinar || 0) + cd - now
-          return sendAsChannel(m.chat, { text: `👑 Debes esperar *${formatDelta(rem)}* para minar de nuevo.` }, { quoted: m })
+          return sendAsChannel(m.chat, { text: `🔥 Debes esperar *${formatDelta(rem)}* para minar de nuevo.` }, { quoted: m })
         }
         const addExp = randInt(1, 49)
         const addMoney = randInt(1, 99)
@@ -188,7 +164,7 @@ let handler = async (m, { conn, text = '', usedPrefix = '#', command = '' }) => 
         u.money = (u.money || 0) + addMoney
         u.lastMinar = now
         return sendAsChannel(m.chat, {
-          text: `👑 Estabas minando. Recursos:\n\n💫 *Exp:* ${addExp}\n💜 *${currency}:* ${addMoney}`
+          text: `🔥 Estabas minando. Recursos:\n\n💪 *Exp:* ${addExp}\n🌸 *${currency}:* ${addMoney}`
         }, { quoted: m })
       }
 
@@ -199,7 +175,7 @@ let handler = async (m, { conn, text = '', usedPrefix = '#', command = '' }) => 
         const u = ensureUser(who)
         const gained = randInt(1, 99)
         u.money = (u.money || 0) + gained
-        return sendAsChannel(m.chat, { text: `🌟 Cometiste tu crime de hoy en un banco y obtuviste *${gained} ${currency}*` }, { quoted: m })
+        return sendAsChannel(m.chat, { text: `🔥 Cometiste tu crime de hoy en un banco y obtuviste *${gained} ${currency}*` }, { quoted: m })
       }
 
       /* ---------------- ROB / ROB2 (1 hora): rob -> EXP, rob2 -> monedas ---------------- */
@@ -212,30 +188,30 @@ let handler = async (m, { conn, text = '', usedPrefix = '#', command = '' }) => 
         const cd = toMs(1, 0, 0) // 1 hora
         if (now - (u[cdKey] || 0) < cd) {
           const rem = (u[cdKey] || 0) + cd - now
-          return sendAsChannel(m.chat, { text: `👑 Debes esperar *${formatDelta(rem)}* para usar *${cmd}*` }, { quoted: m })
+          return sendAsChannel(m.chat, { text: `🔥 Debes esperar *${formatDelta(rem)}* para usar *${cmd}*` }, { quoted: m })
         }
         const target = getTargetJid()
-        if (!target) return sendAsChannel(m.chat, { text: '👑 Dime a quien quieres robar.' }, { quoted: m })
-        if (target === who) return sendAsChannel(m.chat, { text: '👑 No puedes robarte a ti mismo.' }, { quoted: m })
+        if (!target) return sendAsChannel(m.chat, { text: '🔥 Dime a quien quieres robar.' }, { quoted: m })
+        if (target === who) return sendAsChannel(m.chat, { text: '🔥 No puedes robarte a ti mismo.' }, { quoted: m })
 
         ensureUser(target)
         const victim = global.db.data.users[target]
-        if (!victim) return sendAsChannel(m.chat, { text: '👑 Usuario no encontrado.' }, { quoted: m })
+        if (!victim) return sendAsChannel(m.chat, { text: '🔥 Usuario no encontrado.' }, { quoted: m })
 
         if (cmd === 'rob') {
           const stolen = victim.exp || 0
-          if (!stolen) return sendAsChannel(m.chat, { text: '👑 Esta persona no tiene experiencia que robar.' }, { quoted: m })
+          if (!stolen) return sendAsChannel(m.chat, { text: '🔥 Esta persona no tiene experiencia que robar.' }, { quoted: m })
           victim.exp = 0
           u.exp = (u.exp || 0) + stolen
           u.lastRob = now
-          return sendAsChannel(m.chat, { text: `👑 Le robaste ${stolen} Exp a @${target.split('@')[0]}`, mentions: [target] }, { quoted: m })
+          return sendAsChannel(m.chat, { text: `🔥 Le robaste ${stolen} Exp a @${target.split('@')[0]}`, mentions: [target] }, { quoted: m })
         } else {
           const stolen = victim.money || 0
-          if (!stolen) return sendAsChannel(m.chat, { text: '👑 Esta persona no tiene dinero para robarselo.' }, { quoted: m })
+          if (!stolen) return sendAsChannel(m.chat, { text: '🔥 Esta persona no tiene dinero para robarselo.' }, { quoted: m })
           victim.money = 0
           u.money = (u.money || 0) + stolen
           u.lastRob2 = now
-          return sendAsChannel(m.chat, { text: `👑 Le robaste ${stolen} ${currency} a @${target.split('@')[0]}`, mentions: [target] }, { quoted: m })
+          return sendAsChannel(m.chat, { text: `🔥 Le robaste ${stolen} ${currency} a @${target.split('@')[0]}`, mentions: [target] }, { quoted: m })
         }
       }
 
@@ -262,17 +238,17 @@ let handler = async (m, { conn, text = '', usedPrefix = '#', command = '' }) => 
         if (!arg) return sendAsChannel(m.chat, { text: 'Formato: #d all  o  #d <cantidad>' }, { quoted: m })
         if (arg.toLowerCase() === 'all') {
           const amount = u.money || 0
-          if (!amount) return sendAsChannel(m.chat, { text: '👑 No tienes nada.' }, { quoted: m })
+          if (!amount) return sendAsChannel(m.chat, { text: '🔥 No tienes nada.' }, { quoted: m })
           u.money = 0
           u.bank = (u.bank || 0) + amount
-          return sendAsChannel(m.chat, { text: `💜 Depositaste ${amount} ${currency} al banco. Ya no te lo podrán robar.` }, { quoted: m })
+          return sendAsChannel(m.chat, { text: `💪 Depositaste ${amount} ${currency} al banco. Ya no te lo podrán robar.` }, { quoted: m })
         }
         const n = parseInt(arg)
-        if (!n || n <= 0) return sendAsChannel(m.chat, { text: '👑 Cantidad inválida.' }, { quoted: m })
-        if ((u.money || 0) < n) return sendAsChannel(m.chat, { text: '👑 No tienes suficiente dinero para depositar esa cantidad.' }, { quoted: m })
+        if (!n || n <= 0) return sendAsChannel(m.chat, { text: '🔥 Cantidad inválida.' }, { quoted: m })
+        if ((u.money || 0) < n) return sendAsChannel(m.chat, { text: '🔥 No tienes suficiente dinero para depositar esa cantidad.' }, { quoted: m })
         u.money -= n
         u.bank = (u.bank || 0) + n
-        return sendAsChannel(m.chat, { text: `💜 Depositaste ${n} ${currency} al banco. Ya no te lo podrán robar.` }, { quoted: m })
+        return sendAsChannel(m.chat, { text: `🔥 Depositaste ${n} ${currency} al banco. Ya no te lo podrán robar.` }, { quoted: m })
       }
 
       /* ---------------- BAL ---------------- */
@@ -304,11 +280,14 @@ let handler = async (m, { conn, text = '', usedPrefix = '#', command = '' }) => 
         }
 
         const out =
-`👑 BAL - USER 👑
+`*🔥 BALANCE DEL USUARIO 🔥*
 
-🌟 ${currency}: ${u.money || 0}
-💫 Exp: ${u.exp || 0}
-💜 Bank: ${u.bank || 0}
+*🔥 ${currency}:*
+> ${u.money || 0}
+*💫 Exp:*
+> ${u.exp || 0}
+*🌸 Bank:*
+> ${u.bank || 0}
 
 > *PixelCrew-Team*`
 
@@ -334,7 +313,7 @@ let handler = async (m, { conn, text = '', usedPrefix = '#', command = '' }) => 
           })
           .sort((a, b) => b.total - a.total)
 
-        if (!arr.length) return sendAsChannel(m.chat, { text: '👑 No hay usuarios en el top.' }, { quoted: m })
+        if (!arr.length) return sendAsChannel(m.chat, { text: 'No hay usuarios en el top.' }, { quoted: m })
 
         const perPage = 10
         const totalPages = Math.max(1, Math.ceil(arr.length / perPage))
@@ -342,10 +321,10 @@ let handler = async (m, { conn, text = '', usedPrefix = '#', command = '' }) => 
         const start = (page - 1) * perPage
         const pageItems = arr.slice(start, start + perPage)
 
-        let body = '``👑 TOP USUARIOS 👑``\n\n'
+        let body = '```TOP USUARIOS```\n\n'
         const mentions = []
         pageItems.forEach((it, i) => {
-          body += `💜 @${it.jid.split('@')[0]}:\n💫 ${currency}: ${it.money}\n🌟 Exp: ${it.exp}\n\n`
+          body += `🔥 @${it.jid.split('@')[0]}:\n🔥 ${currency}: ${it.money}\n💪 Exp: ${it.exp}\n\n`
           mentions.push(it.jid)
         })
         body += `> Página ${page} de ${totalPages}`
@@ -358,7 +337,7 @@ let handler = async (m, { conn, text = '', usedPrefix = '#', command = '' }) => 
         const who = m.sender
         const u = ensureUser(who)
         if ((u.exp || 0) < 1000) {
-          return sendAsChannel(m.chat, { text: '🌟 No tienes suficientes Experiencia para subir de nivel.' }, { quoted: m })
+          return sendAsChannel(m.chat, { text: '🔥 No tienes suficientes Experiencia para subir de nivel.' }, { quoted: m })
         }
         u.exp -= 1000
         u.level = (u.level || 1) + 1
@@ -371,7 +350,7 @@ let handler = async (m, { conn, text = '', usedPrefix = '#', command = '' }) => 
             if (participant && (participant.admin || participant.isAdmin)) rango = 'Aprendiz'
           } catch (e) {}
         }
-        return sendAsChannel(m.chat, { text: `🌟 LEVELUP 🌟\n\n💜 Level: ${u.level}\n👑 Rango: ${rango}` }, { quoted: m })
+        return sendAsChannel(m.chat, { text: `💪 LEVELUP 💪\n\n🌟 Level: ${u.level}\n🔥 Rango: ${rango}` }, { quoted: m })
       }
 
       default:
