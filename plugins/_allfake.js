@@ -19,11 +19,11 @@ global.mes = d.toLocaleDateString('es', {month: 'long'})
 global.año = d.toLocaleDateString('es', {year: 'numeric'})
 global.tiempo = d.toLocaleString('en-US', {hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true})
 
-var canal = 'https://yotsuba-web.giize.com' 
-var comunidad = 'https://yotsuba-web.giize.com'
-var git = 'hhttps://yotsuba-web.giize.com'
-var github = 'https://yotsuba-web.giize.com' 
-var correo = 'https://whatsapp.com/channel/0029VbBkjlfLSmbWl3SH6737'
+var canal = 'https://DevDaniel.xyz/' 
+var comunidad = 'https://DevDaniel.xyz/'
+var git = 'https://DevDaniel.xyz/'
+var github = 'https://DevDaniel.xyz/' 
+var correo = 'https://DevDaniel.xyz/'
 global.redes = [canal, comunidad, git, github, correo].getRandom()
 
 global.nombre = m.pushName || 'Anónimo'
