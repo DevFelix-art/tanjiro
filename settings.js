@@ -25,10 +25,10 @@ global.Jadibts = true
 // ====
 
 global.botname = "⏤͟͞ू⃪ ፝͜⁞𝐓ꪖn͟𝐣𝐢𝐫𝐨 - 𝐔𝐥𝐭𝐫𝐚 𝐁𝐨𝐭 ִֶ ࣪˖🔥 ִֶָ་༘"
-global.textbot = "𝓓𝓮𝓿𝓮𝓵𝓸𝓹𝓮𝓭 𝓫𝔂 *DanielDev*"
-global.dev = "Made With *Daniel*"
-global.author = "Made With *Daniel*"
-global.etiqueta = "DevDaniel"
+global.textbot = "𝓓𝓮𝓿𝓮𝓵𝓸𝓹𝓮𝓭 𝓫𝔂 𝐃𝖾𝘃𝐃𝖺𝗻𝗂𝗲𝗅"
+global.dev = "Made With 𝐃𝖾𝘃𝐃𝖺𝗻𝗂𝗲𝗅"
+global.author = "Made With 𝐃𝖾𝘃𝐃𝖺𝗻𝗂𝗲𝗅"
+global.etiqueta = "𝐃𝖾𝘃𝐃𝖺𝗻𝗂𝗲𝗅"
 global.currency = "Monedas"
 global.emoji = "🔥"
 global.banner = "https://qu.ax/EBBsc.jpg"
