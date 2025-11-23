@@ -34,7 +34,7 @@ async function sendByeTo(conn, chatId, userId) {
     const despedida =
       `🌸 ADIOS DEL GRUPO 🌸\n\n` +
       `*->* ${taguser}\n\n` +
-      `\n\n` +
+      `*"No importa cuantas veces caiga, me levantare de nuevo."*\n\n` +
       `> Si necesitas ayuda, usa *#help*.`
 
     await conn.sendMessage(chatId, {
@@ -115,22 +115,22 @@ const cmdHandler = async (m, { conn, command, args, usedPrefix, isAdmin, isOwner
   if (command !== 'bye') return
 
   // Solo admins/owner pueden activar/desactivar
-  if (!(isAdmin || isOwner)) return conn.reply(m.chat, '🤨 Solo los administradores pueden activar o desactivar la despedida.\n\n- Deja de intentar lo que nunca podrás baboso', m, rcanal)
+  if (!(isAdmin || isOwner)) return conn.reply(m.chat, '🔥 El fuego es mas frío cuando no usas cosas que no te pertenecen. esta función sólo puede ser ejecutada por admins', m, rcanal)
 
   const chat = global.db.data.chats[m.chat]
   if (!chat) return
   let isByeEnabled = chat.bye !== undefined ? chat.bye : true
 
   if (args[0] === 'on' || args[0] === 'enable') {
-    if (isByeEnabled) return conn.reply(m.chat, `🌟 la función *bye* ya estaba *activada*.`, m, rcanal)
+    if (isByeEnabled) return conn.reply(m.chat, `🌸 la función *bye* ya estaba *activada*.`, m, rcanal)
     isByeEnabled = true
   } else if (args[0] === 'off' || args[0] === 'disable') {
-    if (!isByeEnabled) return conn.reply(m.chat, `❄ la función *bye* ya estaba *desactivada*.`, m, rcanal)
+    if (!isByeEnabled) return conn.reply(m.chat, `🔥 la función *bye* ya estaba *desactivada*.`, m, rcanal)
     isByeEnabled = false
   } else {
     return conn.reply(
       m.chat,
-      `☃️ Los admins pueden activar o desactivar la función *${command}* utilizando:\n\n🌟 *${command}* enable\n🌟 *${command}* disable\n\n🛠 Estado actual » *${isByeEnabled ? '✓ Activado' : '✗ Desactivado'}*`,
+      `🔥 Los admins pueden activar o desactivar la función *${command}* utilizando:\n\n🌸 *${command}* enable\n🌸 *${command}* disable\n\n🛠 Estado actual » *${isByeEnabled ? '✓ Activado' : '✗ Desactivado'}*`,
       m
     )
   }
