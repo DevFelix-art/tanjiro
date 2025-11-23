@@ -130,7 +130,6 @@ let handler = async (m, { conn }) => {
 *|✎ Uptime:* ${uptime}
 *|✎ Ping:* ${p}
 *|✎ Baileys:* Multi device
-*|✎ Tipo:* ${(conn.user.jid == global.conn.user.jid ? 'OficialBot' : 'Sub-Bot')}
 *╰━─━─≪≪✠≫≫─━─━╯*
 
 
@@ -141,6 +140,10 @@ let handler = async (m, { conn }) => {
 *|✎ Rango:* ${rango}
 *|✎ Nivel:* ${userLevel}
 *╰━─━─≪≪✠≫≫─━─━╯*
+
+╔━━━━━━━━━━╗
+*${(conn.user.jid == global.conn.user.jid ? '(OficialBot)' : '(Sub-Bot)')}*
+╚━━━━━━━━━━╝
 
 
 *➪ 𝗟𝗜𝗦𝗧𝗔*
