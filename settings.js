@@ -17,7 +17,7 @@ global.prems = []
 
 global.libreria = "Baileys Multi Device"
 global.vs = "^1.8.2|Latest"
-global.nameqr = "✯ Yotsuba Nakano ✰"
+global.nameqr = "🔥 Tanjiro Ultra Bot 🔥"
 global.sessions = "Session"
 global.jadi = "JadiBots"
 global.yukiJadibts = true
@@ -37,13 +37,13 @@ global.catalogo = "https://files.catbox.moe/o2zoj6.png"
 
 // ====
 
-global.group = "https://chat.whatsapp.com/Ht5ck9c1Eji2TRBXSkTHjY?mode=wwt"
-global.community = "https://whatsapp.com/channel/0029VbBkjlfLSmbWl3SH6737"
-global.channel = "https://whatsapp.com/channel/0029VbBkjlfLSmbWl3SH6737"
-global.github = "https://whatsapp.com/channel/0029VbBkjlfLSmbWl3SH6737"
-global.gmail = "https://whatsapp.com/channel/0029VbBkjlfLSmbWl3SH6737"
+global.group = "https://whatsapp.com/channel/0029VbBWqxJIXnlpbekjVV37"
+global.community = "https://whatsapp.com/channel/0029VbBWqxJIXnlpbekjVV37"
+global.channel = "https://whatsapp.com/channel/0029VbBWqxJIXnlpbekjVV37"
+global.github = "https://whatsapp.com/channel/0029VbBWqxJIXnlpbekjVV37"
+global.gmail = "https://whatsapp.com/channel/0029VbBWqxJIXnlpbekjVV37"
 global.ch = {
-ch1: "120363421036863665@newsletter"
+ch1: "120363403323307346@newsletter"
 }
 
 // ====
