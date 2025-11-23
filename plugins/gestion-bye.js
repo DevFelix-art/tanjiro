@@ -139,7 +139,7 @@ const handler = async (m, { conn, command, args, usedPrefix, isAdmin, isOwner })
   return conn.reply(m.chat, `la función *despedida* fue *${isByeEnabled ? 'activada' : 'desactivada'}* para este grupo.`, m, rcanal)
 }
 
-handler.help = ['bye', 'testbye']
+handler.help = ['bye', 'testbye'];
 handler.tags = ['group']
 handler.command = ['bye', 'testbye']
 handler.group = true
