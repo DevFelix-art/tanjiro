@@ -140,8 +140,7 @@ const handler = async (m, { conn, command, args, usedPrefix, isAdmin, isOwner })
 }
 
 handler.help = ['bye', 'testbye'];
-handler.tags = ['group']
-handler.command = ['bye', 'testbye']
-handler.group = true
-
+handler.tags = ['group'];
+handler.command = ['bye', 'testbye'];
+handler.group = true;
 export default handler
