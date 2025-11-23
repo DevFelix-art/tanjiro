@@ -74,16 +74,21 @@ let handler = async (m, { conn, args }) => {
     }, 0)
     const pp = await conn.profilePictureUrl(userId, 'image').catch(_ => 'https://raw.githubusercontent.com/The-King-Destroy/Adiciones/main/Contenido/1745522645448.jpeg')
 
-    const text = `*👑 PERFIL DE USUARIO 👑*
+    const text = `*🔥 PERFIL DE USUARIO 🌸*
 
-*💜 Nombre:* ${name}
-*💫 Experiencia:* ${exp.toLocaleString()}
-*🌟 Nivel:* ${nivel}
-*💠 ${currency}:* ${total.toLocaleString()}
-*💛 Comandos usados:* ${user.commands || 0}
+*🔥 Nombre:*
+> ${name}
+*💫 Experiencia:*
+> ${exp.toLocaleString()}
+*🌟 Nivel:*
+> ${nivel}
+*💪 ${currency}:*
+> ${total.toLocaleString()}
+*🌸 Comandos usados:*
+> ${user.commands || 0}
 ${favLine}
 
-> Developed by DevFélix.`
+> Developed by DevDaniel.`
 
     await conn.sendMessage(m.chat, { image: { url: pp }, caption: text, mentions: [userId] }, { quoted: fkontak })
   } catch (error) {
