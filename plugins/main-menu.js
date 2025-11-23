@@ -122,28 +122,29 @@ let handler = async (m, { conn }) => {
   } catch (e) { rankText = 'N/A' }
 
   // construir texto según el template proporcionado
-  let txt = `¡𝐇𝐨𝐥𝐚! Soy *Tanjiro Kamado,* aquí tienes mi lista de comandos:
+  let txt = `¡𝐇𝐨𝐥𝐚! Soy *Tanjiro Kamado,*
+> Aquí tienes mi lista de comandos:
 
-*╭╼𝅄꒰𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ꒱ 𐔌 BOT - INFO 𐦯*
-*|✎ Creador:* DevDaniel
-*|✎ Users:* ${totalreg.toLocaleString()}
-*|✎ Uptime:* ${uptime}
-*|✎ Ping:* ${p}
-*|✎ Baileys:* Multi device
+*╭ׅׄ̇─ׅ̻ׄ╮۪̇߭︹ׅ̟ׄ̇︹ׅ۪ׄ̇߭︹ׅ̟ׄ̇⊹۪̇߭︹ׅ̟ׄ̇︹ׅ۪ׄ̇߭︹ׅ̟ׄ̇⊹۪̇߭︹ׅ̟ׄ̇︹ׅ۪ׄ̇߭︹ׅ̟ׄ̇⊹*
+├ׁ̟̇            「 BOT - INFO 」 
+*├ׁ̟̇  ✎ Creador:* DevDaniel
+*├ׁ̟̇  ✎ Usuarios:*${totalreg.toLocaleString}
+*├ׁ̟̇  ✎ Baileys:* Múlti Device
+*├ׁ̟̇  ✎ Bot:* ${(conn.user.jid == global.conn.user.jid ? 'Principal' : 'Sub-Bot')}
+*├ׁ̟̇  ✎ Tiempo activo:* ${uptime}
+*├ׁ̟̇  ✎ Latencia:* ${p}
 *╰━─━─≪≪✠≫≫─━─━╯*
 
 
-*╭╼𝅄꒰𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ꒱ 𐔌 INFO - USER 𐦯*
-*|✎ Nombre:* ${username}
-*|✎ ${currency}:* ${userMoney}
-*|✎ Exp:* ${userExp}
-*|✎ Rango:* ${rango}
-*|✎ Nivel:* ${userLevel}
+*╭ׅׄ̇─ׅ̻ׄ╮۪̇߭︹ׅ̟ׄ̇︹ׅ۪ׄ̇߭︹ׅ̟ׄ̇⊹۪̇߭︹ׅ̟ׄ̇︹ׅ۪ׄ̇߭︹ׅ̟ׄ̇⊹۪̇߭︹ׅ̟ׄ̇︹ׅ۪ׄ̇߭︹ׅ̟ׄ̇⊹*
+├ׁ̟̇          「 INFO - USER 」 
+*├ׁ̟̇ ✎ Nombre:* ${username}
+*├ׁ̟̇ ✎ Rango:*${rango}
+*├ׁ̟̇ ✎ Nivel:*${userLevel}
+*├ׁ̟̇ ✎ ${currency}:*${userMoney}
+*├ׁ̟̇ ✎ Exp:*${userExp}
 *╰━─━─≪≪✠≫≫─━─━╯*
-
-╔━━━━━━━━━━╗
-               *${(conn.user.jid == global.conn.user.jid ? '(OficialBot)' : '(Sub-Bot)')}*
-╚━━━━━━━━━━╝
+> Puedes hacerte Sub-Bot escribiendo los comandos *#code* para código de 8 dígitos y *#qr* para código Qr (de foto).
 
 
 *➪ 𝗟𝗜𝗦𝗧𝗔*
@@ -153,142 +154,203 @@ let handler = async (m, { conn }) => {
            *➪ 𝗖𝗢𝗠𝗔𝗡𝗗𝗢𝗦*
 
 
-*꒰⌢◌⃘࣭ٜ࣪࣪࣪۬☪︎︎︎︎̸ ✎ ꒱ 𐔌 SISTEMA 𐦯*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #p*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #ping*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #menu*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #help*
-*╰━─━─≪≪✠≫≫─━─━╯*
+*╔━ HERRAMIENTAS ━╗*
+> ❏ *#pinterest <texto>*
+➪ Descarga 10 imágenes de pinterest.
+> *❏ #play <musica>*
+➪ Descarga música como audio.
+> *❏ #catbox <imagen>*
+➪ Convierte fotos, videos o gifts en enlace.
+> *❏ #toimg <sticker>*
+➪ Convierte stickers en imagen.
+> *❏ #pin <texto>*
+➪ Descarga 10 imágenes de pinterest.
+> *❏ #yts <link>*
+➪ Descarga un video convertido en audio de YouTube mediante el enlace.
+> *❏ #ytv*
+➪ Descarga un video de YouTube mediante el enlace.
+> *❏ #play2*
+➪ Descarga video de YouTube.
+> *❏ #ytm3*
+➪ Descarga video de YouTube como mp3.
+> *❏ #ytmp4*
+➪ Descarga videos de YouTube como mp4.
+*╚▭࣪▬ִ▭࣪▬ִ▭࣪▬ִ▭࣪▬ִ▭࣪▭╝*
 
 
-*꒰⌢◌⃘࣭ٜ࣪࣪࣪۬☪︎︎︎︎̸ ✎ ꒱ 𐔌 HERRAMIENTAS 𐦯*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #pinterest <texto>*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #play <musica>*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #catbox <imagen>*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #toimg <sticker>*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #pin <texto>*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #yts*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #ytv*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #play2*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #ytm3*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #ytmp4*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #yta*
-*╰━─━─≪≪✠≫≫─━─━╯*
+*╔━      SOCKETS     ━╗*
+> *❏ #qr*
+➪ Convietete en Sub-Bot mediante un código qr.
+> *❏ #code*
+➪ Conviértete en Sub-Bot mediante un código de 8 dígitos.
+> *❏ #self <on/off>*
+➪ Has que tu Session te responda solo a ti o a todos.
+> *❏ #sologp <on/off>*
+➪ Has que tu Session solo responda en grupos.
+> *❏ #leave*
+➪ Salte de un grupo.
+*╚▭࣪▬ִ▭࣪▬ִ▭࣪▬ִ▭࣪▬ִ▭࣪▭╝*
 
 
-*꒰⌢◌⃘࣭ٜ࣪࣪࣪۬☪︎︎︎︎̸ ✎ ꒱ 𐔌 SOCKETS  𐦯*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #qr*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #code*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #self <on/off>*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #sologp <on/off>*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #logout*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #leave*
-*╰━─━─≪≪✠≫≫─━─━╯*
+*╔━      JUEGOS     ━╗*
+> *❏ #formarpareja5*
+➪ El bot forma 5 parejas a lo random.
+> *❏ #formarpareja*
+➪ El bot forma una pareja a lo random.
+> *❏ #top <texto>*
+➪ El bot forma un top 10 a lo random.
+*╚▭࣪▬ִ▭࣪▬ִ▭࣪▬ִ▭࣪▬ִ▭࣪▭╝*
 
 
-*꒰⌢◌⃘࣭ٜ࣪࣪࣪۬☪︎︎︎︎̸ ✎ ꒱ 𐔌 NSFW  𐦯*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #sexo*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #69*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #violar*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #r34*
-*╰━─━─≪≪✠≫≫─━─━╯*
+*╔━      EMOX     ━╗*
+> *❏ #bailar*
+➪ Has el baile de tilin.
+> *❏ #dance*
+➪ Has un bailesito perron.
+> *❏ #lamer*
+➪ Lame a alguien.
+> *❏ #lamber*
+➪ Lambe a alguien.
+> *❏ #feliz*
+➪ Envía un gift de alguien feliz.
+> *❏ #happy*
+➪ Di a todos que estas feliz.
+> *❏ #triste*
+➪ Di a todos que estas triste.
+> *❏ #borracho*
+➪ Emborrachate con un gifts.
+> *❏ #drunk*
+➪ Emborrachate.
+> *❏ #kill*
+➪ Mata a alguien del grupo.
+> *❏ #matar*
+➪ Matate a ti mismo o a alguien del grupo.
+> *❏ #kiss*
+➪ Besa a alguien del grupo.
+> *❏ #besar*
+➪ Besate a ti mismo o a alguien del grupo.
+*╚▭࣪▬ִ▭࣪▬ִ▭࣪▬ִ▭࣪▬ִ▭࣪▭╝*
 
 
-*꒰⌢◌⃘࣭ٜ࣪࣪࣪۬☪︎︎︎︎̸ ✎ ꒱ 𐔌 JUEGOS  𐦯*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #formarpareja5*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #formarpareja*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #top*
-*╰━─━─≪≪✠≫≫─━─━╯*
+*╔━      STICKERS     ━╗*
+> *❏ #s*
+➪ Crea Stickers con fotos videos gifts u otros stickers.
+> *❏ #sticker*
+➪ Crea Stickers con fotos o videos.
+> *❏ #brat*
+➪ Conviete stickers en textos.
+> *❏ #qc*
+➪ Has stickers de textos con tu nombre de usuario.
+> *❏ #emojimix*
+➪ Mescla dos emojis para hacer un sticker.
+> *❏ #take*
+➪ *Undefined*
+> *❏ #wm*
+➪ *Undefined*
+> *❏ #bratv*
+➪ Convierte textos en stickers de vídeo.
+*╚▭࣪▬ִ▭࣪▬ִ▭࣪▬ִ▭࣪▬ִ▭࣪▭╝*
 
 
-*꒰⌢◌⃘࣭ٜ࣪࣪࣪۬☪︎︎︎︎̸ ✎ ꒱ 𐔌 EMOX  𐦯*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #bailar*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #dance*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #lamer*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #lamber*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #feliz*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #happy*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #triste*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #borracho
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #drunk*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #kill*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #matar*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #kiss*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #besar*
-*╰━─━─≪≪✠≫≫─━─━╯*
+╔━      GESTIÓN     ━╗*
+> *❏ #testwelcome*
+➪ Mira el mensaje de bienvenida.
+> *❏ #testbye*
+➪ Mira el mensaje de despedida. 
+> *❏ #bye <on/off>*
+➪ Activa o desactiva la despedida. 
+> *❏ #welcome <on/off>*
+➪ Activa o desactiva la bienvenida.
+> *❏ #antienlace <on/off>*
+➪ Activa o desactiva el antilinks.
+> *❏ #antilink <on/off>*
+➪ Activa o desactiva el antienlace. 
+> *❏ #modoadmin <on/off>* 
+➪ Activa o desactiva el modo de que el bot solo le responda a los administradores.
+> *❏ #detect <on/off>* 
+➪ Activa o desactiva los mensajes de avisos.
+*╚▭࣪▬ִ▭࣪▬ִ▭࣪▬ִ▭࣪▬ִ▭࣪▭╝*
 
 
-*꒰⌢◌⃘࣭ٜ࣪࣪࣪۬☪︎︎︎︎̸ ✎ ꒱ 𐔌 STICKERS  𐦯*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #s*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #sticker*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #brat*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #qc*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #emojimix*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #take*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #wm*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #bratv*
-*╰━─━─≪≪✠≫≫─━─━╯*
+*╔━     GRUPOS     ━╗*
+> *❏ #demote*
+➪ Quita a alguien de admin.
+> *❏ #promote*
+➪ Pon a alguien de admin. 
+> *❏ #delete*
+➪  Elimina un mensaje.
+> *❏ #kick*
+➪ Elimina a una persona.
+> *❏ #del*
+➪ Elimina un mensaje.
+> *❏ #promover*
+➪ Has que alguien sea admin del grupo. 
+> *❏ #degradar*
+➪ Quita a una persona de admin del grupo. 
+> *❏ #delprimary*
+➪ Quita al bot principal que está puesto en tu grupo.
+> *❏ #setprimary*
+➪ Has que un solo Sub-Bot responda en tu grupo.
+*╚▭࣪▬ִ▭࣪▬ִ▭࣪▬ִ▭࣪▬ִ▭࣪▭╝*
 
 
-*꒰⌢◌⃘࣭ٜ࣪࣪࣪۬☪︎︎︎︎̸ ✎ ꒱ 𐔌 RPG  𐦯*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #daily
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #cofre
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #minar
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #rob
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #rob2
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #depositar <all>
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #d <all>
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #lvl
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #bal
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #baltop
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #w
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #trabajar
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #work
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #chambear
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #chamba
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #slut
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #prostituirse
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #perfil
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #profile
-*╰━─━─≪≪✠≫≫─━─━╯*
+*╔━      ECONOMÍA     ━╗*
+> *❏ #daily*
+➪ Reclama una recompensa todos los días.
+> *❏ #cofre*
+➪ Reclama un cofre diario.
+> *❏ #minar*
+➪ Mina y gana *${currency}* cada 24 minutos.
+> *❏ #rob*
+➪ Roba *${currency}* a los usuarios cada 1 hora.
+> *❏ #rob2*
+➪ Roba Exp a usuarios cada 1 hora.
+> *❏ #depositar <all>*
+➪ Deposita tus *${currency}* al banco.
+> *❏ #d <all>*
+➪ Deposita tus *${currency}* al banco.
+> *❏ #lvl*
+➪ Sube de nivel.
+> *❏ #bal*
+➪ Mira cuantos recursos tienes en total.
+> *❏ #baltop*
+➪ Mira el top de usuarios con más recursos del grupo.
+> *❏ #w*
+➪ Trabaja para ganar *${currency}.*
+> *❏ #trabajar*
+➪ Trabaja para ganar *${currency}.*
+> *❏ #work*
+➪ Trabaja para ganar *${currency}.*
+> *❏ #chambear*
+➪ Trabaja para ganar *${currency}.*
+> *❏ #chamba*
+➪ Trabaja para ganar *${currency}.*
+> *❏ #slut*
+➪ prostitutate para ganar *${currency}*
+> *❏ #prostituirse*
+➪ prostitutate para ganar *${currency}*
+> *❏ #perfil*
+➪ Mira tu perfil e información.
+> *❏ #profile*
+➪ Mira tu perfil.
+*╚▭࣪▬ִ▭࣪▬ִ▭࣪▬ִ▭࣪▬ִ▭࣪▭╝*
 
 
-*꒰⌢◌⃘࣭ٜ࣪࣪࣪۬☪︎︎︎︎̸ ✎ ꒱ 𐔌 GESTIÓN 𐦯*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #testwelcome
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #testbye
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #bye <on/off>*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #welcome <on/off>*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #antienlace <on/off>*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #antilink <on/off>*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #modoadmin <on/off>* 
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #detect <on/off>* 
-*╰━─━─≪≪✠≫≫─━─━╯*
+*╔━   OWNER   ━╗*
+> *❏ #autoadmin*
+➪ Has que el bot te de admin en el grupo.
+> *❏ #join*
+➪ Has que el bot se una a un grupo.
+> *❏ #update*
+➪ Actualiza al bot.
+> *❏ #spamwa*
+➪ Has spam a un usuario.
+> *❏ #prefix*
+➪ Pon un solo prefijo al bot.
+> *❏ #rprefix*
+➪ Restablese el prefijo del bot.
+*╚▭࣪▬ִ▭࣪▬ִ▭࣪▬ִ▭࣪▬ִ▭࣪▭╝*
 
-
-*꒰⌢◌⃘࣭ٜ࣪࣪࣪۬☪︎︎︎︎̸ ✎ ꒱ 𐔌 GRUPOS 𐦯*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #demote*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #promote*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #delete*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #kick*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #del*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #promover*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #degradar*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #delprimary*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #setprimary*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #tagall*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #invocar*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #todos*
-*╰━─━─≪≪✠≫≫─━─━╯*
-
-
-*꒰⌢◌⃘࣭ٜ࣪࣪࣪۬☪︎︎︎︎̸ ✎ ꒱ 𐔌 OWNER  𐦯*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #autoadmin*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #join*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #update*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #spamwa*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #prefix*
-> *𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ❏ #rprefix*
-*╰━─━─≪≪✠≫≫─━─━╯*
 
 > ${textbot}
 `.trim()
