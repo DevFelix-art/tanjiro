@@ -128,7 +128,7 @@ let handler = async (m, { conn }) => {
 *╭ׅׄ̇─ׅ̻ׄ╮۪̇߭︹ׅ̟ׄ̇︹ׅ۪ׄ̇߭︹ׅ̟ׄ̇⊹۪̇߭︹ׅ̟ׄ̇︹ׅ۪ׄ̇߭︹ׅ̟ׄ̇⊹۪̇߭︹ׅ̟ׄ̇︹ׅ۪ׄ̇߭︹ׅ̟ׄ̇⊹*
 ├ׁ̟̇            「 BOT - INFO 」 
 *├ׁ̟̇ ✎ Creador:* DevDaniel
-*├ׁ̟̇ ✎ Usuarios:* ${totalreg.toLocaleString}
+*├ׁ̟̇ ✎ Usuarios:* ${totalreg}
 *├ׁ̟̇ ✎ Baileys:* Múlti Device
 *├ׁ̟̇ ✎ Bot:* ${(conn.user.jid == global.conn.user.jid ? 'Principal' : 'Sub-Bot')}
 *├ׁ̟̇ ✎ Tiempo activo:* ${uptime}
