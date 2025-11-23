@@ -139,15 +139,9 @@ const cmdHandler = async (m, { conn, command, args, usedPrefix, isAdmin, isOwner
   return conn.reply(m.chat, `la función *despedida* fue *${isByeEnabled ? 'activada' : 'desactivada'}* para este grupo.`, m, rcanal)
 }
 
-cmdHandler.help = ['bye', 'testbye']
-cmdHandler.tags = ['group']
-cmdHandler.command = ['bye', 'testbye']
-cmdHandler.group = true
+handler.help = ['bye', 'testbye']
+handler.tags = ['group']
+handler.command = ['bye', 'testbye']
+handler.group = true
 
-const exported = handler
-exported.help = cmdHandler.help
-exported.tags = cmdHandler.tags
-exported.command = cmdHandler.command
-exported.group = true
-
-export default exported
+export default handler
