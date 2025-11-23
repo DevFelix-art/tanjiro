@@ -363,18 +363,18 @@ console.log(m.message)
 
 global.dfail = (type, m, conn) => {
 const msg = {
-rowner: `*ᐛ👑* Está funcion solo puede ser usada por mi *creador.*
-> ✰ 𝐃𝐞𝐬𝐜𝐨𝐧𝐨𝐬𝐢𝐝𝐨 𝐗𝐳𝐬𝐲 (•̀ᴗ•́)و`, 
-owner: `*ᐛ👑* Está funcion solo puede ser usada por mi *creador.*
-> ✰ 𝐃𝐞𝐬𝐜𝐨𝐧𝐨𝐬𝐢𝐝𝐨 𝐗𝐳𝐬𝐲 (•̀ᴗ•́)و`, 
-mods: `*ᐛ👑* Está funcion solo puede ser usada por mi *creador.*
-> ✰ 𝐃𝐞𝐬𝐜𝐨𝐧𝐨𝐬𝐢𝐝𝐨 𝐗𝐳𝐬𝐲 (•̀ᴗ•́)و`, 
-premium: `*ᐛ👑* Está funcion solo puede ser usada por los ciudadanos amigos del rey.`, 
-group: `*ᐛ👑* Está funcion encantada solo puede ser usada en reinos de poder *(grupos).*`,
-private: `*ᐛ👑* Está funcion encantada solo puede ser ejecutada en mi casa *(chat privado).*`,
-admin: `*ᐛ👑* Está funcion encantada solo puede ser ejecutada por las personas más importantes del reino *(grupo).*`, 
-botAdmin: `*ᐛ👑* Está funcion encantada solo puede ser ejecutada si yo soy una de las princesas de este reino *(grupo).*`,
-restrict: `*ᐛ👑* Está funcion encantada fue desactivada por mi padre *(creador).*`
+rowner: `🔥 Está funcion solo puede ser usada por mi *creador.*
+> DevDaniel`, 
+owner: `🔥 Está funcion solo puede ser usada por mi *creador.*
+> DevDaniel`, 
+mods: `🔥 Está funcion solo puede ser usada por mi *creador.*
+> DevDaniel`, 
+premium: `*🔥* Está funcion solo puede ser usada por admins.`, 
+group: `*🔥* Está funcion solo puede ser usada en *grupos.*`,
+private: `🔥 Está funcion solo puede ser ejecutada en mi *chat privado.*`,
+admin: `🔥 Está funcion solo puede ser ejecutada por admins del grupo.`, 
+botAdmin: `🔥 Está funcion solo puede ser ejecutada si yo soy un admin del grupo.`,
+restrict: `🔥 Está funcion  fue desactivada por mi padre *(creador).*`
 }[type]
 if (msg) return conn.reply(m.chat, msg, m, rcanal).then(_ => m.react('✖️'))
 }
