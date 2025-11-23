@@ -142,7 +142,7 @@ let handler = async (m, { conn }) => {
 *╰━─━─≪≪✠≫≫─━─━╯*
 
 ╔━━━━━━━━━━╗
-           *${(conn.user.jid == global.conn.user.jid ? '(OficialBot)' : '(Sub-Bot)')}*
+             *${(conn.user.jid == global.conn.user.jid ? '(OficialBot)' : '(Sub-Bot)')}*
 ╚━━━━━━━━━━╝
 
 
