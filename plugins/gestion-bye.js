@@ -105,7 +105,7 @@ handler.before = async function (m, { conn, groupMetadata }) {
 }
 
 // COMANDO #bye (activar/desactivar) y testbye. Mantengo la lógica original y permisos.
-const cmdHandler = async (m, { conn, command, args, usedPrefix, isAdmin, isOwner }) => {
+const handler = async (m, { conn, command, args, usedPrefix, isAdmin, isOwner }) => {
   if (command === 'testbye') {
     // Test: siempre envía el mensaje, aunque esté desactivado
     await sendByeTo(conn, m.chat, m.sender)
