@@ -122,20 +122,14 @@ let handler = async (m, { conn }) => {
   } catch (e) { rankText = 'N/A' }
 
   // construir texto según el template proporcionado
-  let txt = `¡𝐇𝐨𝐥𝐚! Soy *${nombreBot}* *${(conn.user.jid == global.conn.user.jid ? '(OficialBot)' : '(Sub-Bot)')}*
-
-❄ ¡Espero que tengas una feliz Navidad! ☃️
-
-> ꒰⌢ ʚ˚₊‧ ✎ ꒱ INFO:
-- ${nombreBot} es un bot privado, el cual el bot principal no se unirá a tus grupos. Si quieres tener el bot en tu grupo tienes que ser Sub-Bot con *(#code)*
-> ꒰⌢ ʚ˚₊‧ ✎ ꒱ ❐ ʚ˚₊‧ʚ˚₊‧ʚ˚
+  let txt = `¡𝐇𝐨𝐥𝐚! Soy *Tanjiro Kamado* *${(conn.user.jid == global.conn.user.jid ? '(OficialBot)' : '(Sub-Bot)')}*
 
 *╭╼𝅄꒰𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪ ꒱ 𐔌 BOT - INFO 𐦯*
-*|✎ Creador:* 𓆩‌۫᷼ ִֶָღܾ݉͢ғ꯭ᴇ꯭፝ℓɪ꯭ͨא𓆪
+*|✎ Creador:* DevDaniel
 *|✎ Users:* ${totalreg.toLocaleString()}
 *|✎ Uptime:* ${uptime}
 *|✎ Ping:* ${p}
-*|✎ Baileys:* PixelCrew-Bails
+*|✎ Baileys:* Multi device
 *|✎ Comandos:* https://yotsuba-web.giize.com/commands.html
 *╰─ׅ─ׅ┈─๋︩︪─☪︎︎︎̸⃘࣭ٜ࣪࣪࣪۬◌⃘۪֟፝֯۫۫︎⃪𐇽۫۬🎄⃘۪֟፝֯۫۫۫۬◌⃘࣭ٜ࣪࣪࣪۬☪︎︎︎︎̸─ׅ─ׅ┈─๋︩︪─╯*
 
