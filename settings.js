@@ -31,9 +31,9 @@ global.author = "Made With *Daniel*"
 global.etiqueta = "DevDaniel"
 global.currency = "Monedas"
 global.emoji = "🔥"
-global.banner = "https://files.catbox.moe/o2zoj6.png"
-global.icono = "https://files.catbox.moe/o2zoj6.png"
-global.catalogo = "https://files.catbox.moe/o2zoj6.png"
+global.banner = "https://qu.ax/EBBsc.jpg"
+global.icono = "https://qu.ax/lTOFy.jpg"
+global.catalogo = "https://qu.ax/STuvx.jpg"
 
 // ====
 
