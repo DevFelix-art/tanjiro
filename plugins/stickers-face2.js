@@ -84,7 +84,7 @@ await conn.sendFile(m.chat, stiker, 'sticker.webp', '', m, rcanal)
 break
 }
 case 'take': case 'wm': {
-if (!m.quoted) return m.reply(`👑 Responde a algo usando la función *${usedPrefix + command}* seguido del nuevo nombre.\n> Ejemplo: *${usedPrefix + command}* NuevoNombre`)
+if (!m.quoted) return m.reply(`🔥 Responde a algo usando la función *${usedPrefix + command}* seguido del nuevo nombre.\n> Ejemplo: *${usedPrefix + command}* NuevoNombre`)
 await m.react('🕒')
 const stickerData = await m.quoted.download()
 if (!stickerData) return await m.react('✖️'), m.reply('😿 No pude descargar el sticker.')
