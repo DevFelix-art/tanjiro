@@ -8,7 +8,7 @@ const cooldown = 5 * 60 * 1000
 if (Date.now() < user.lastslut) {
 const restante = user.lastslut - Date.now()
 const tiempoRestante = formatTime(restante)
-return conn.reply(m.chat, `💛 Espera *${tiempoRestante}* para usar *${usedPrefix + command}* otra vez.`, m, rcanal)
+return conn.reply(m.chat, `🔥 Espera *${tiempoRestante}* para usar *${usedPrefix + command}* otra vez.`, m, rcanal)
 }
 user.lastslut = Date.now() + cooldown
 const evento = pickRandom(slut)
@@ -46,6 +46,6 @@ return list[Math.floor(Math.random() * list.length)]
 }
 const slut = [
 { tipo: 'victoria', mensaje: "Le chupas el guevo a un administrador y ganas." },
-{ tipo: 'derrota', mensaje: "Felix no te quiso dar nada porque no Cumpliste como te lo pidio, perdiste." },
+{ tipo: 'derrota', mensaje: "Daniel no te quiso dar nada porque no Cumpliste como te lo pidio, perdiste." },
 { tipo: 'derrota', mensaje: "El admin después de que se lo chupes te sacó del grupo, perdiste." }
 ]
