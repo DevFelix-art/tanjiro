@@ -34,6 +34,6 @@ await conn.reply(m.chat, errorMessage2, m)
 
 handler.help = ['update']
 handler.tags = ['owner']
-handler.command = ['update', 'fix', 'actualizar']
+handler.command = ['update', 'fix', 'actualizar', 'up']
 
 export default handler
