@@ -4,7 +4,7 @@ const handler = async (m, { conn, usedPrefix }) => {
   const chat = global.db.data.chats[m.chat]
 
   if (!chat.primaryBot) {
-    return conn.reply(m.chat, `*🙁 Todos los magos pueden usar su magia aquí porque no hay ninguno establecido como principal.*`, m, rcanal)
+    return conn.reply(m.chat, `*Aquí no hay bot principal*`, m, rcanal)
   }
 
   try {
@@ -13,7 +13,7 @@ const handler = async (m, { conn, usedPrefix }) => {
 
     conn.reply(
       m.chat, 
-      `*🌟 El mago @${oldPrimary.split`@`[0]} se le acabo su poder. Ahora todos los magos pueden usar su magia con facilidad.*`, 
+      `*🔥 El bot @${oldPrimary.split`@`[0]} fue quitado de principal. Ahora todos los bots responderán en este grupo.*`, 
       m, 
       { mentions: [oldPrimary] }
     )
