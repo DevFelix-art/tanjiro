@@ -18,8 +18,8 @@ handler.before = async function (m, { conn, participants, groupMetadata }) {
   const rcanal = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: channelRD.id, serverMessageId: '', newsletterName: channelRD.name }, externalAdReply: { title: "Yotsuba Nakano IA", body: textbot, mediaUrl: null, description: null, previewType: "PHOTO", thumbnail: await (await fetch(icono)).buffer(), sourceUrl: redes, mediaType: 1, renderLargerThumbnail: false }, mentionedJid: null }}
   const pp = await conn.profilePictureUrl(m.chat, 'image').catch(_ => null) || 'https://files.catbox.moe/xr2m6u.jpg'
 
-  const admingp = `❄ Aviso:\n\n> @${users.split('@')[0]} *Ahora es administrador de este grupo* ya que *@${usuario.split('@')[0]},* Le acaba de dar privilegios de administración.`
-  const noadmingp = `❄ Aviso:\n\n> @${users.split('@')[0]} *Ya no es administrador de este grupo* ya que *@${usuario.split('@')[0]},* Le quito los privilegios.`
+  const admingp = `🔥 Aviso:\n\n> @${users.split('@')[0]} *Ahora es administrador de este grupo* ya que *@${usuario.split('@')[0]},* Le acaba de dar privilegios de administración.`
+  const noadmingp = `🌸 Aviso:\n\n> @${users.split('@')[0]} *Ya no es administrador de este grupo* ya que *@${usuario.split('@')[0]},* Le quito los privilegios.`
 
   // Mantener la lógica de eliminación de sesiones para messageStubType == 2 si está activado detect
   if (chat.detect && m.messageStubType == 2) {
