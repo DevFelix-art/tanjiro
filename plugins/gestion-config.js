@@ -64,15 +64,15 @@ const handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin })
   }
 
   if (args[0] === 'on' || args[0] === 'enable') {
-    if (isEnable) return conn.reply(m.chat, `☃️ *${type}* ya estaba *activado* we`, m, rcanal)
+    if (isEnable) return conn.reply(m.chat, `🔥 *${type}* ya estaba *activado* we`, m, rcanal)
     isEnable = true
   } else if (args[0] === 'off' || args[0] === 'disable') {
-    if (!isEnable) return conn.reply(m.chat, `❄ *${type}* ya estaba *desactivado* we`, m, rcanal)
+    if (!isEnable) return conn.reply(m.chat, `🌸 *${type}* ya estaba *desactivado* we`, m, rcanal)
     isEnable = false
   } else {
     return conn.reply(
       m.chat,
-      `❄ Los admins pueden activar o desactivar la función *${command}* utilizando:\n\n🌟 *${command}* enable\n🌟 *${command}* disable\n\n🛠 Estado actual » *${isEnable ? '✓ Activada' : '✗ Desactivada'}*`,
+      `🔥 Los admins pueden activar o desactivar la función *${command}* utilizando:\n\n🌸 *${command}* enable\n💪 *${command}* disable\n\n🛠 Estado actual » *${isEnable ? '✓ Activada' : '✗ Desactivada'}*`,
       m, rcanal
     )
   }
@@ -80,7 +80,7 @@ const handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin })
   // Guardar el nuevo estado en la propiedad correspondiente
   chat[type] = isEnable
 
-  conn.reply(m.chat, `🙈 La función *${type}* fue *${isEnable ? 'activada' : 'desactivada'}* para este grupo.`, m, rcanal)
+  conn.reply(m.chat, `🌸 La función *${type}* fue *${isEnable ? 'activada' : 'desactivada'}* para este grupo.`, m, rcanal)
 }
 
 handler.help = ['welcome', 'bienvenida', 'modoadmin', 'onlyadmin', 'antilink', 'antienlace', 'detect', 'alertas']
