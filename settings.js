@@ -17,14 +17,14 @@ global.prems = []
 
 global.libreria = "Baileys Multi Device"
 global.vs = "^1.8.2|Latest"
-global.nameqr = "🔥 Tanjiro Ultra Bot 🔥"
+global.nameqr = "🔥̶۫̄͟Ⓣ︎𓏲𝐓a҉𝐧𝐣і̷r̤᥆𓍲̈͜𝗨̴ᥣ̥𝗍̈rᥲ̄𓊓̵̬𝐁o҉t̸⋆͙̈么͟͞──"
 global.sessions = "Session"
 global.jadi = "JadiBots"
 global.yukiJadibts = true
 
 // ====
 
-global.botname = "Yotsuba Nakano"
+global.botname = "⏤͟͞ू⃪ ፝͜⁞𝐓ꪖn͟𝐣𝐢𝐫𝐨 - 𝐔𝐥𝐭𝐫𝐚 𝐁𝐨𝐭 ִֶ ࣪˖🔥 ִֶָ་༘"
 global.textbot = "𝓓𝓮𝓿𝓮𝓵𝓸𝓹𝓮𝓭 𝓫𝔂 *DanielDev*"
 global.dev = "Made With *Daniel*"
 global.author = "Made With *Daniel*"
