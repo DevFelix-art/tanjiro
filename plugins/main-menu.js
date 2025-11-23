@@ -127,22 +127,22 @@ let handler = async (m, { conn }) => {
 
 *╭ׅׄ̇─ׅ̻ׄ╮۪̇߭︹ׅ̟ׄ̇︹ׅ۪ׄ̇߭︹ׅ̟ׄ̇⊹۪̇߭︹ׅ̟ׄ̇︹ׅ۪ׄ̇߭︹ׅ̟ׄ̇⊹۪̇߭︹ׅ̟ׄ̇︹ׅ۪ׄ̇߭︹ׅ̟ׄ̇⊹*
 ├ׁ̟̇            「 BOT - INFO 」 
-*├ׁ̟̇  ✎ Creador:* DevDaniel
-*├ׁ̟̇  ✎ Usuarios:*${totalreg.toLocaleString}
-*├ׁ̟̇  ✎ Baileys:* Múlti Device
-*├ׁ̟̇  ✎ Bot:* ${(conn.user.jid == global.conn.user.jid ? 'Principal' : 'Sub-Bot')}
-*├ׁ̟̇  ✎ Tiempo activo:* ${uptime}
-*├ׁ̟̇  ✎ Latencia:* ${p}
+*├ׁ̟̇ ✎ Creador:* DevDaniel
+*├ׁ̟̇ ✎ Usuarios:* ${totalreg.toLocaleString}
+*├ׁ̟̇ ✎ Baileys:* Múlti Device
+*├ׁ̟̇ ✎ Bot:* ${(conn.user.jid == global.conn.user.jid ? 'Principal' : 'Sub-Bot')}
+*├ׁ̟̇ ✎ Tiempo activo:* ${uptime}
+*├ׁ̟̇ ✎ Latencia:* ${p}
 *╰━─━─≪≪✠≫≫─━─━╯*
 
 
 *╭ׅׄ̇─ׅ̻ׄ╮۪̇߭︹ׅ̟ׄ̇︹ׅ۪ׄ̇߭︹ׅ̟ׄ̇⊹۪̇߭︹ׅ̟ׄ̇︹ׅ۪ׄ̇߭︹ׅ̟ׄ̇⊹۪̇߭︹ׅ̟ׄ̇︹ׅ۪ׄ̇߭︹ׅ̟ׄ̇⊹*
 ├ׁ̟̇          「 INFO - USER 」 
 *├ׁ̟̇ ✎ Nombre:* ${username}
-*├ׁ̟̇ ✎ Rango:*${rango}
-*├ׁ̟̇ ✎ Nivel:*${userLevel}
-*├ׁ̟̇ ✎ ${currency}:*${userMoney}
-*├ׁ̟̇ ✎ Exp:*${userExp}
+*├ׁ̟̇ ✎ Rango:* ${rango}
+*├ׁ̟̇ ✎ Nivel:* ${userLevel}
+*├ׁ̟̇ ✎ ${currency}:* ${userMoney}
+*├ׁ̟̇ ✎ Exp:* ${userExp}
 *╰━─━─≪≪✠≫≫─━─━╯*
 > Puedes hacerte Sub-Bot escribiendo los comandos *#code* para código de 8 dígitos y *#qr* para código Qr (de foto).
 
