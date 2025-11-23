@@ -43,7 +43,7 @@ let handler = async (m, { conn }) => {
   const cfg = readSessionConfig(conn)
   const nombreBot = cfg.name || cfg.currency || cfg?.botname || '⏤͟͞ू⃪ ፝͜⁞𝐓ꪖn͟𝐣𝐢𝐫𝐨 - 𝐔𝐥𝐭𝐫𝐚 𝐁𝐨𝐭 ִֶ ࣪˖ 🔥ִֶָ་༘' // prefer name, fallback currency or botname
   const currency = cfg.currency || 'Monedas'
-  const bannerUrl = cfg.banner || 'https://qu.ax/OwkLT.jpg'
+  const bannerUrl = cfg.banner || 'https://qu.ax/STuvx.jpg'
 
   // thumbnail para externalAdReply (intentar descargar)
   let thumbnail = null
