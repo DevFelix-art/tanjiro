@@ -20,7 +20,7 @@ global.vs = "^1.0.0"
 global.nameqr = "🔥̶۫̄͟Ⓣ︎𓏲𝐓a҉𝐧𝐣і̷r̤᥆𓍲̈͜𝗨̴ᥣ̥𝗍̈rᥲ̄𓊓̵̬𝐁o҉t̸⋆͙̈么͟͞──"
 global.sessions = "Session"
 global.jadi = "JadiBots"
-global.yukiJadibts = true
+global.Jadibts = true
 
 // ====
 
