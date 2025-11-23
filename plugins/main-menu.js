@@ -122,7 +122,7 @@ let handler = async (m, { conn }) => {
   } catch (e) { rankText = 'N/A' }
 
   // construir texto según el template proporcionado
-  let txt = `¡𝐇𝐨𝐥𝐚! Soy *Tanjiro Kamado,*
+  let txt = `¡𝐇𝐨𝐥𝐚! Soy *Tanjiro Kamado*
 > Aquí tienes mi lista de comandos:
 
 *╭ׅׄ̇─ׅ̻ׄ╮۪̇߭︹ׅ̟ׄ̇︹ׅ۪ׄ̇߭︹ׅ̟ׄ̇⊹۪̇߭︹ׅ̟ׄ̇︹ׅ۪ׄ̇߭︹ׅ̟ׄ̇⊹۪̇߭︹ׅ̟ׄ̇︹ׅ۪ׄ̇߭︹ׅ̟ׄ̇⊹*
