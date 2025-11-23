@@ -7,7 +7,7 @@ const cooldown = 2 * 60 * 1000
 user.lastwork = user.lastwork || 0
 if (Date.now() < user.lastwork) {
 const tiempoRestante = formatTime(user.lastwork - Date.now())
-return conn.reply(m.chat, `💛 *${tiempoRestante}* para usar *${usedPrefix + command}* otra vez.`, m, rcanal)
+return conn.reply(m.chat, `🔥 *${tiempoRestante}* para usar *${usedPrefix + command}* otra vez.`, m, rcanal)
 }
 user.lastwork = Date.now() + cooldown
 let rsl = Math.floor(Math.random() * 1501) + 2000
@@ -35,7 +35,7 @@ function pickRandom(list) {
 return list[Math.floor(list.length * Math.random())]
 }
 const trabajo = [
-"Trabajas como esclavo de felix ganando",
+"Trabajas como esclavo de daniel ganando",
 "Trabajas como esclavo de los admins ganando",
 "Vendiste tu trasero y obtuviste",
 "Eliminas a otros bots del grupo para evitar spam y recibes"
