@@ -31,9 +31,9 @@ async function sendWelcomeTo(conn, chatId, userId) {
     const devby = `${nombreBot}, ${typeof textbot !== 'undefined' ? textbot : ''}`
 
     const bienvenida =
-      `👑 WELCOME 👑\n\n` +
-      `🌟 ${taguser}\n\n` +
-      `💫 Esperamos disfrutes tu estadía en este mundo mágico.\n\n` +
+      `*🌸 BIENVENIDO AL GRUPO 🌸*\n\n` +
+      `*->* ${taguser}\n\n` +
+      `*"La verdadera fuerza no se mide por lo físico, si no por lo del corazón"*\n\n` +
       `> Usa *#help* para ver mi magia.`
 
     await conn.sendMessage(chatId, {
