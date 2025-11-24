@@ -13,7 +13,7 @@ const handler = async (m, { conn }) => {
 *| CPU:* 13/25 % vCores 
 *| RAM:* 12 GB 
 *| Websites:* 3 
-*|Domains:* 6 
+*| Domains:* 6 
 *| Vps:* 0
 *╚━━━━━━━━━━╝*
 
