@@ -1,41 +1,40 @@
 const handler = async (m, { conn }) => {
   const nombre = '@' + (m.sender?.split('@')[0] || 'usuario');
-  const texto = `*《 MENU SystemBot-V2 》*
+  const texto = `𝐇𝐨𝐥𝐚! *${nombre},* soy *${global.botname}*
 
-*╔━━ INFO BOT ━━╗*
-*| Status:* ✅ Online 
-*| Commmands:* 
-*| Owners:* 2`
-*╚━━━━━━━━━━╝*
 
-*╔━ INFO - STATUS ━╗*
-*| ServerName:* System
-*| CPU:* 13/25 % vCores 
-*| RAM:* 12 GB 
-*| Websites:* 3 
-*| Domains:* 6 
-*| Vps:* 0
-*╚━━━━━━━━━━╝*
+╭⬣「 ✰ 𝐈𝐧𝐟𝐨-𝐁𝐨𝐭 ✰ 」⬣
+│Creador: Félix
+│Estado: Activado
+│Comandos: 4
+╰────────────────
 
-> *Commands the SystemBot-V2*
+╭⬣「 ✰ 𝐑𝐏𝐆 ✰ 」⬣
+│#daily
+│#crime
+│#crimen
+╰────────────────
 
-*╔━━ STATUS ━━╗*
-*| SystemBot-actived*
-*| SystemBot-Desactived*
-*| .s-status*
-*╚━━━━━━━━━━╝*
+╭⬣「 ✰ 𝐆𝐑𝐔𝐏𝐎𝐒 ✰ 」
+│#tag
+│#hidetag
+│#antilink off/on
+│#antienlace off/on
+│#del
+│#delete
+╰────────────────
 
-*╔━━ MAIN ━━╗*
-*| .s-domain (domain|option)*
-*| .add-owner (number|mention)*
-*| .add-domain (dates the domain)*
-*╚━━━━━━━━━━╝*
-> Good bye`;
+╭⬣「 ✰ 𝐒𝐔𝐁𝐒 ✰ 」⬣
+│#qr
+│#code
+╰────────────────
+
+> ${global.texto}`;
 
   await conn.sendMessage(
     m.chat,
     {
-      image: { url: global.banner }, // Usa la imagen desde global.banner de settings.js
+      image: { url: global.menu }, // Usa la imagen desde global.menu
       caption: texto,
       mentions: [m.sender]
     },
@@ -43,7 +42,7 @@ const handler = async (m, { conn }) => {
   );
 };
 
-handler.command = ['s-menu', 's-help'];
-handler.group = false;
+handler.command = ['menu', 'help'];
+handler.group = true;
 
 export default handler;
