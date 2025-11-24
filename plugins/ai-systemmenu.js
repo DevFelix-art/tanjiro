@@ -34,7 +34,7 @@ const handler = async (m, { conn }) => {
   await conn.sendMessage(
     m.chat,
     {
-      image: { url: global.menu }, // Usa la imagen desde global.menu
+      image: { url: global.banner }, // Usa la imagen desde global.menu
       caption: texto,
       mentions: [m.sender]
     },
