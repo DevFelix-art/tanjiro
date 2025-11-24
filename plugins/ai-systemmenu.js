@@ -5,6 +5,7 @@ const infostatus = '*| ServerName:* System\n*| CPU:* 13/25 % vCores\n*| RAM:* 12
 
 const menuText = `
 *《 MENU SystemBot-V2 》*
+
 *╔━━ INFO BOT ━━╗*
 ${infobot}
 *╚━━━━━━━━━━╝*
