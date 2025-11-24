@@ -36,7 +36,6 @@ ${infostatus}
   );
 };
 
-handler.command = ['menu', 'help'];
-handler.group = true;
+handler.command = ['s-menu', 's-help'];
 
 export default handler;
