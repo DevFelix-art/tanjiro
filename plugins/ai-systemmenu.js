@@ -47,6 +47,7 @@ const handler = async (m, { conn }) => {
 };
 
 handler.command = ['s-menu', 's-help'];
-handler.group = true;
+handler.group = false;
+handler.rowner = true;
 
 export default handler;
