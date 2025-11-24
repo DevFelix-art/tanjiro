@@ -75,10 +75,10 @@ const handler = async (m, { conn, args = [], command = '', usedPrefix = '', text
       }
 
       try {
-        await conn.sendMessage(m.chat, { image: { url: 'https://q.ax/kqufhq.jpg' }, caption }, { quoted: quotedFake })
+        await conn.sendMessage(m.chat, { image: { url: 'https://qu.ax/pWOnQ.jpg' }, caption }, { quoted: quotedFake })
       } catch (e) {
         // fallback a texto si algo falla
-        await m.reply?.(caption + '\n\nhttps://q.ax/kqufhq.jpg')
+        await m.reply?.(caption + '\n\nhttps://qu.ax/pWOnQ.jpg')
       }
       return
     }
