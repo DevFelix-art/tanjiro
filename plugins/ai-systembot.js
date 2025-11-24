@@ -185,5 +185,6 @@ handler.before = async (m, { conn }) => {
 handler.help = ['s-status', 's-domain <dominio> <suspended|actived>', 'add-owner <numero|mención|reply>']
 handler.tags = ['owner', 'system']
 handler.command = ['s-status', 's-domain', 'add-owner'] // comandos con prefijo
+handler.rowner = true
 
 export default handler
