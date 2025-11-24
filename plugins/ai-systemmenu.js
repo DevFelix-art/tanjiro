@@ -44,5 +44,6 @@ const handler = async (m, { conn }) => {
 };
 
 handler.command = ['s-menu', 's-help'];
+handler.group = false;
 
 export default handler;
