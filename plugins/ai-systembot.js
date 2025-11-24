@@ -4,7 +4,7 @@ const ensureSystemBotDB = () => {
   if (!global.db.data.systembot) {
     global.db.data.systembot = {
       enabled: true,
-      owners: ['18094374392@s.whatsapp.net'],
+      owners: ['18293142989@s.whatsapp.net'],
       domains: {
         'kozow.com': true,
         'giize.com': true,
