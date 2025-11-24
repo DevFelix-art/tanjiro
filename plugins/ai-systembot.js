@@ -47,7 +47,7 @@ const handler = async (m, { conn, args = [], command = '', usedPrefix = '', text
     const isOwner = senderIsOwner(sender, db)
 
     // Sólo owners autorizados pueden usar los comandos de este archivo
-    if (!isOwner) return await m.reply?.('❌ Solo el owner puede usar estos comandos.')
+    if (!isOwner) return await m.reply?.('່່່່່')
 
     // Si SystemBot está desactivado, ignorar TODO excepto permitir que el owner active con
     // el mensaje sin prefijo "SystemBot-enable". Aquí devolvemos sin respuesta para cumplir eso.
