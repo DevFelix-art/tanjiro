@@ -1,35 +1,37 @@
 const handler = async (m, { conn }) => {
   const nombre = '@' + (m.sender?.split('@')[0] || 'usuario');
-  const texto = `𝐇𝐨𝐥𝐚! *${nombre},* soy *${global.botname}*
+  const texto = `*《 MENU SystemBot-V2 》*
 
+*╔━━ INFO BOT ━━╗*
+*| Status:* ✅ Online 
+*| Commmands:* 6
+*| Owners:* 2
+*╚━━━━━━━━━━╝*     
 
-╭⬣「 ✰ 𝐈𝐧𝐟𝐨-𝐁𝐨𝐭 ✰ 」⬣
-│Creador: Félix
-│Estado: Activado
-│Comandos: 4
-╰────────────────
+*╔━ INFO - STATUS ━╗*
+*| ServerName:* System
+*| CPU:* 13/25 % vCores 
+*| RAM:* 12 GB 
+*| Websites:* 3 
+*|Domains:* 6 
+*| Vps:* 0
+*╚━━━━━━━━━━╝*     
 
-╭⬣「 ✰ 𝐑𝐏𝐆 ✰ 」⬣
-│#daily
-│#crime
-│#crimen
-╰────────────────
+> *Commands the SystemBot-V2*
 
-╭⬣「 ✰ 𝐆𝐑𝐔𝐏𝐎𝐒 ✰ 」
-│#tag
-│#hidetag
-│#antilink off/on
-│#antienlace off/on
-│#del
-│#delete
-╰────────────────
+*╔━━    STATUS  ━━╗*
+*| SystemBot-actived*
+*| SystemBot-Desactived*
+*| .s-status*
+*╚━━━━━━━━━━╝*     
 
-╭⬣「 ✰ 𝐒𝐔𝐁𝐒 ✰ 」⬣
-│#qr
-│#code
-╰────────────────
+*╔━━    MAIN   ━━╗*
+*| .s-domain (domain|option)*
+*| .add-owner (number|mention)*
+*| .add-domain (dates the domain)*
+*╚━━━━━━━━━━╝* 
 
-> ${global.texto}`;
+> Good bye`;
 
   await conn.sendMessage(
     m.chat,
