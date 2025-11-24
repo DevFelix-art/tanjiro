@@ -4,7 +4,7 @@ const handler = async (m, { conn }) => {
 
 *╔━━ INFO BOT ━━╗*
 *| Status:* ✅ Online 
-*| Commmands:* 6
+*| Commmands:* 7
 *| Owners:* 2
 *╚━━━━━━━━━━╝*     
 
@@ -26,6 +26,8 @@ const handler = async (m, { conn }) => {
 *╚━━━━━━━━━━╝*     
 
 *╔━━    MAIN   ━━╗*
+*| .s-help*
+*| .s-menu*
 *| .s-domain (domain|option)*
 *| .add-owner (number|mention)*
 *| .add-domain (dates the domain)*
