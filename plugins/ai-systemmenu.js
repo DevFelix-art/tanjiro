@@ -3,11 +3,18 @@ const handler = async (m, { conn }) => {
   const texto = `*《 MENU SystemBot-V2 》*
 
 *╔━━ INFO BOT ━━╗*
-${infobot}
+*| Status:* ✅ Online 
+*| Commmands:* 
+*| Owners:* 2`
 *╚━━━━━━━━━━╝*
 
 *╔━ INFO - STATUS ━╗*
-${infostatus}
+*| ServerName:* System
+*| CPU:* 13/25 % vCores 
+*| RAM:* 12 GB 
+*| Websites:* 3 
+*|Domains:* 6 
+*| Vps:* 0
 *╚━━━━━━━━━━╝*
 
 > *Commands the SystemBot-V2*
