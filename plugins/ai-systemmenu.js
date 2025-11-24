@@ -1,20 +1,46 @@
 import fs from 'fs';
-import fetch from 'node-fetch';
 
 const infobot = '*| Status:* ✅ Online > *| Commmands:* > *| Owners:* 2';
-const infostatus = '*| ServerName:* System > *| CPU:* 13/25 % vCores > *| RAM:* 12 GB > *| Websites:* 3 > *|Domains:* 6 > *| Vps:* 0';
+const infostatus = '*| ServerName:* System\n*| CPU:* 13/25 % vCores\n*| RAM:* 12 GB\n*| Websites:* 3\n*|Domains:* 6\n*| Vps:* 0';
+
+const menuText = `
+*《 MENU SystemBot-V2 》*
+*╔━━ INFO BOT ━━╗*
+${infobot}
+*╚━━━━━━━━━━╝*
+*╔━ INFO - STATUS ━╗*
+${infostatus}
+*╚━━━━━━━━━━╝*
+> *Commands the SystemBot-V2*
+*╔━━ STATUS ━━╗*
+*| SystemBot-actived
+*| SystemBot-Desactived
+*| .s-status
+*╚━━━━━━━━━━╝*
+*╔━━ MAIN ━━╗*
+*| .s-domain (domain|option)
+*| .add-owner (number|mention)
+*| .add-domain (dates the domain)
+*╚━━━━━━━━━━╝*
+> Good bye
+`.trim();
 
 const handler = async (m, { conn, usedPrefix, command, text }) => {
-  if (!text) {
-    return conn.sendMessage(m.chat, {
-      text: `*《 MENU SystemBot-V2 》*\n*╔━━ INFO BOT ━━╗*\n${infobot}\n*╚━━━━━━━━━━╝*\n*╔━ INFO - STATUS ━╗*\n${infostatus}\n*╚━━━━━━━━━━╝*\n> *Commands the SystemBot-V2*\n*╔━━ STATUS ━━╗*\n*| SystemBot-actived\n*| SystemBot-Desactived\n*| .s-status\n*╚━━━━━━━━━━╝*\n*╔━━ MAIN ━━╗*\n*| .s-domain (domain|option)\n*| .add-owner (number|mention)\n*| .add-domain (dates the domain)\n*╚━━━━━━━━━━╝*\n> Good bye`,
-      image: { url: 'https:                    
-    }, { quoted: m });
-  }
-};
+  try {
+    // Cambia esta URL por la de tu imagen. También puedes poner una ruta local y usar fs.readFileSync.
+    const imageUrl = 'https://example.com/tu-imagen.jpg';
 
-handler.command = ['//qu.ax/pWOnQ.jpg' }
-    }, { quoted: m });
+    if (!text) {
+      await conn.sendMessage(
+        m.chat,
+        {
+          image: { url: imageUrl },
+          caption );
+  } catch (err) {
+    console.error('Handler error:', err);
+    try {
+      await conn.sendMessage(m.chat, { text: 'Ocurrió un error al procesar el comando.' }, { quoted: m });
+    } catch (_) {}
   }
 };
 
