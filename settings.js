@@ -32,7 +32,7 @@ global.author = "Made With 𝐃𝖾𝘃𝐃𝖺𝗻𝗂𝗲𝗅"
 global.etiqueta = "𝐃𝖾𝘃𝐃𝖺𝗻𝗂𝗲𝗅"
 global.currency = "Monedas"
 global.emoji = "🔥"
-global.banner = "https://qu.ax/EBBsc.jpg"
+global.banner = "https://qu.ax/pWOnQ.jpg"
 global.icono = "https://qu.ax/lTOFy.jpg"
 global.catalogo = "https://qu.ax/STuvx.jpg"
 
