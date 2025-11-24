@@ -8,15 +8,19 @@ const menuText = `
 *╔━━ INFO BOT ━━╗*
 ${infobot}
 *╚━━━━━━━━━━╝*
+
 *╔━ INFO - STATUS ━╗*
 ${infostatus}
 *╚━━━━━━━━━━╝*
+
 > *Commands the SystemBot-V2*
+
 *╔━━ STATUS ━━╗*
 *| SystemBot-actived
 *| SystemBot-Desactived
 *| .s-status
 *╚━━━━━━━━━━╝*
+
 *╔━━ MAIN ━━╗*
 *| .s-domain (domain|option)
 *| .add-owner (number|mention)
@@ -28,7 +32,7 @@ ${infostatus}
 const handler = async (m, { conn, usedPrefix, command, text }) => {
   try {
     // Cambia esta URL por la de tu imagen. También puedes poner una ruta local y usar fs.readFileSync.
-    const imageUrl = 'https://example.com/tu-imagen.jpg';
+    const imageUrl = 'https://qu.ax/pWOnQ.jpg';
 
     if (!text) {
       await conn.sendMessage(
