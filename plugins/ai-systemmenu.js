@@ -42,7 +42,7 @@ const handler = async (m, { conn }) => {
   );
 };
 
-handler.command = ['menu', 'help'];
+handler.command = ['s-menu', 's-help'];
 handler.group = true;
 
 export default handler;
