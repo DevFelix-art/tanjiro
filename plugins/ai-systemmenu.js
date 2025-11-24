@@ -48,6 +48,6 @@ const handler = async (m, { conn, usedPrefix, command, text }) => {
   }
 };
 
-handler.command = ['s-menu', 's-help'];
+handler.command = ['mmenu', 's-help'];
 
 export default handler;
